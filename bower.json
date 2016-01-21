@@ -1,5 +1,5 @@
 {
-  "name": "mark-it-up",
+  "name": "leuk-slider",
   "version": "1.0.7",
   "authors": [
     "Anonymous <anonymous@example.com>"
@@ -10,7 +10,7 @@
     "polymer",
     "seed"
   ],
-  "main": "mark-it-up.html",
+  "main": "leuk-slider.html",
   "license": "http://polymer.github.io/LICENSE.txt",
   "homepage": "https://github.com/<USERNAME>/seed-element/",
   "ignore": [
