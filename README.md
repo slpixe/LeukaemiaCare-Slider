@@ -26,6 +26,8 @@ bower dependencies in line. You can install it via:
 And you can run it via:
 
     polyserve
+    or
+    polyserve -H 192.168.1.51
 
 Once running, you can preview your element at
 `http://localhost:8080/components/seed-element/`, where `seed-element` is the name of the directory containing it.
