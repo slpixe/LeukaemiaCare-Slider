@@ -26,6 +26,12 @@ Example:
                 display: block;
             }
 
+            .container {
+                width: 980px;
+                border: 1px solid darkolivegreen;
+                margin: 0 auto;
+            }
+
             .banner {
                 position: relative;
                 width: 50%;
@@ -60,33 +66,49 @@ Example:
                 bottom: -32px;
             }
 
+            .owl-item {
+                max-height: 260px;
+            }
+
         </style>
 
         <!--<link rel="stylesheet" type="text/css" href="../markitup/markitup/skins/markitup/style.css">-->
         <!--<link rel="stylesheet" type="text/css" href="../markitup/markitup/sets/default/style.css">-->
 
-        <div class="owl-carousel owl-theme">
-            <div class="banner">
-                <h2>other stuff!</h2>
-                <p>jifowejfoi</p>
-                <p>jfweiofweoi</p>
-                <p>wejfoijweo</p>
-                <p>qwqdiqjdoiqwwq</p>
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, et.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, et.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, et.</p>
+        </div>
+
+        <div id="leukslider" class="owl-carousel owl-theme leuk-theme">
+            <div class="">
+                <img src="http://lorempixel.com/500/300/animals/1/" alt="">
             </div>
-            <div class="banner">
-                <h2>other stuff!</h2>
-                <p>jifowejfoi</p>
-                <p>jfweiofweoi</p>
-                <p>wejfoijweo</p>
-                <p>qwqdiqjdoiqwwq</p>
+            <div class="">
+                <img src="http://lorempixel.com/500/300/animals/2/" alt="">
             </div>
-            <div class="banner">
-                <h2>other stuff!</h2>
-                <p>jifowejfoi</p>
-                <p>jfweiofweoi</p>
-                <p>wejfoijweo</p>
-                <p>qwqdiqjdoiqwwq</p>
+            <div class="">
+                <img src="http://lorempixel.com/500/300/animals/3/" alt="">
             </div>
+            <div class="">
+                <img src="http://lorempixel.com/500/300/animals/4/" alt="">
+            </div>
+        </div>
+
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, et.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, et.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, et.</p>
+        </div>
+
+
+        <div class="banner">
+            <h2>other stuff!</h2>
+            <p>jifowejfoi</p>
+            <p>jfweiofweoi</p>
+            <p>wejfoijweo</p>
+            <p>qwqdiqjdoiqwwq</p>
         </div>
 
     </template>
@@ -99,8 +121,12 @@ Example:
             cols: 80,
             ready: function() {
 //                $(this.$.rich).markItUp(mySettings);
+
+                this.scopeSubtree(this.$.leukslider, false);
+
                 $('.owl-carousel').owlCarousel({
-                    items: 3
+                    items: 3,
+                    margin: 0
                 });
             }
         });
