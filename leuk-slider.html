@@ -2,6 +2,10 @@
 <link rel="stylesheet" href="../owl.carousel/dist/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="../owl.carousel/dist/assets/owl.theme.default.min.css">
 <script type="application/javascript" src="../owl.carousel/dist/owl.carousel.min.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Karla:700' rel='stylesheet' type='text/css'>
+
 <!--<script type="text/javascript" src="../markitup/markitup/jquery.markitup.js"></script>-->
 
 <link rel="import" href="../polymer/polymer.html">
@@ -45,7 +49,12 @@ Example:
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 margin-top: 32px;
-                margin-bottom: 32px;
+                /*margin-bottom: 32px;*/
+                margin-bottom: 52px;
+                color: white;
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                font-size: 12px;
             }
             .banner > * {
                 padding: 0 16px;
@@ -69,6 +78,15 @@ Example:
             .banner:after {
                 background-image: url('images/homepage-banner_03.png');
                 bottom: -32px;
+            }
+
+            .banner h2 {
+                font-family: 'Neucha', cursive;
+                font-size: 37px;
+                margin: 0 0 10px;
+            }
+            .banner p {
+                margin: 0 0 10px;
             }
 
             .owl-stage-outer:before, .owl-stage-outer:after {
@@ -99,6 +117,30 @@ Example:
                 margin: 20px;
             }
 
+            .btn {
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                padding: 8px 20px 6px 20px;
+                border-radius: 5px;
+                text-transform: uppercase;
+                background: #42bba4;
+                font-family: 'Neucha', cursive;
+                text-decoration: none;
+                position: relative;
+            }
+            .btn:after {
+                content: '';
+                background-image: url('images/arrow-right.png');
+                background-repeat: no-repeat;
+                width: 22px;
+                height: 17px;
+                display: inline-block;
+                margin-left: 8px;
+                top: 2px;
+                position: relative;
+            }
+
         </style>
 
         <!--<link rel="stylesheet" type="text/css" href="../markitup/markitup/skins/markitup/style.css">-->
@@ -112,15 +154,6 @@ Example:
 
         <div id="leukslider" class="owl-carousel owl-theme leuk-theme">
             <content></content>
-        </div>
-
-
-        <div class="banner">
-            <h2>other stuff!</h2>
-            <p>jifowejfoi</p>
-            <p>jfweiofweoi</p>
-            <p>wejfoijweo</p>
-            <p>qwqdiqjdoiqwwq</p>
         </div>
 
     </template>
