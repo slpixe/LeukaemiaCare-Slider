@@ -11,9 +11,14 @@ An element for LeukaemiaCare to provider a carousel of information
 
 Example:
 
-    <seed-element>
-      <h2>Hello seed-element</h2>
-    </seed-element>
+    <leuk-slider>
+        <div class="">
+            <img src="../images/slide1.jpg" alt="">
+        </div>
+        <div class="">
+            <img src="../images/slide2.jpg" alt="">
+        </div>
+    </leuk-slider>
 
 @demo demo/index.html
 -->
@@ -82,17 +87,16 @@ Example:
                 right: 0;
             }
 
-            .owl-item {
+            .owl-item > * {
+                padding-bottom: 56.25%;
+                background-size: cover;
                 position: relative;
             }
-            .owl-item:not(.active):after, .owl-item.active:nth-child(1):after, .owl-item.active:nth-child(3):after {
-                /*content: '';*/
-                /*background-color: rgba(255,0,0,0.5);*/
-                /*height: 100%;*/
-                /*width: 100%;*/
-                /*position: absolute;*/
-                /*top: 0;*/
-                /*left: 0;*/
+            .text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 20px;
             }
 
         </style>
@@ -125,7 +129,6 @@ Example:
         polyLeukSlider = Polymer({
             is: 'leuk-slider',
             value: "",
-            rows: 25,
             cols: 80,
             ready: function() {
 //                $(this.$.rich).markItUp(mySettings);
