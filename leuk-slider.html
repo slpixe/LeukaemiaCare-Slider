@@ -163,6 +163,30 @@ Example:
                 position: relative;
             }
 
+            .owl-nav {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                margin-top: 0 !important;
+                top: 40%;
+            }
+            .owl-prev, .owl-next {
+                position: absolute;
+                background-repeat: no-repeat;
+                width: 70px;
+                height: 70px;
+            }
+            .owl-prev {
+                left: 33.33%;
+                margin-left: -80px !important;
+                background-image: url('images/slider-arrow-left.png');
+            }
+            .owl-next {
+                right: 33.33%;
+                margin-right: -80px !important;
+                background-image: url('images/slider-arrow-right.png');
+            }
+
         </style>
 
         <!--<link rel="stylesheet" type="text/css" href="../markitup/markitup/skins/markitup/style.css">-->
@@ -174,7 +198,7 @@ Example:
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, et.</p>
         </div>
 
-        <div id="leukslider" class="owl-carousel owl-theme leuk-theme">
+        <div id="leukslider" class="owl-carousel leuk-theme">
             <content></content>
         </div>
 
@@ -197,6 +221,7 @@ Example:
                     nav: true,
                     center: true,
                     loop: true,
+                    navText: ['',''],
                 });
             }
         });
