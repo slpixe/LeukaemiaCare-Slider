@@ -12,7 +12,7 @@
   ],
   "main": "leuk-slider.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/slpixe/leuk-slider/",
   "ignore": [
     "/.*",
     "/test/"

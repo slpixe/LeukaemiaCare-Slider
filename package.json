@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slpixe/LeukaemiaCare-Slider.git"
+    "url": "git+https://github.com/slpixe/leuk-slider.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/slpixe/LeukaemiaCare-Slider/issues"
+    "url": "https://github.com/slpixe/leuk-slider/issues"
   },
-  "homepage": "https://github.com/slpixe/LeukaemiaCare-Slider#readme"
+  "homepage": "https://github.com/slpixe/leuk-slider#readme"
 }
