@@ -113,7 +113,7 @@ Example:
 
             .owl-stage-outer:before, .owl-stage-outer:after {
                 content: '';
-                width: 33.33%;
+                width: 0%;
                 height: 100%;
                 position: absolute;
                 top: 0;
@@ -178,20 +178,33 @@ Example:
                 margin-top: -35px;
             }
             .owl-prev {
-                left: 33.33%;
+                left: 12%;
                 margin-left: -80px !important;
                 background-image: url('images/slider-arrow-left.png');
             }
             .owl-next {
-                right: 33.33%;
+                right: 12%;
                 margin-right: -80px !important;
                 background-image: url('images/slider-arrow-right.png');
             }
+            @media(min-width: 768px){
+                .owl-stage-outer:before, .owl-stage-outer:after {
+                    width: 100px;
+                }
+            }
+            @media(min-width: 1060px){
+                .owl-prev {
+                    left: 25%;
+                }
+                .owl-next {
+                    right: 25%;
+                }
+                .owl-stage-outer:before, .owl-stage-outer:after {
+                    width: 25%;
+                }
+            }
 
         </style>
-
-        <!--<link rel="stylesheet" type="text/css" href="../markitup/markitup/skins/markitup/style.css">-->
-        <!--<link rel="stylesheet" type="text/css" href="../markitup/markitup/sets/default/style.css">-->
 
         <div class="container">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, et.</p>
@@ -223,6 +236,21 @@ Example:
                     center: true,
                     loop: true,
                     navText: ['',''],
+                    responsive: {
+                        0:{
+                            items: 1,
+                            nav: false
+                        },
+                        768:{
+                            items: 1,
+                            stagePadding: 100,
+                            nav: true
+                        },
+                        1060:{
+                            items: 2,
+                            stagePadding: 0
+                        }
+                    }
                 });
             }
         });
