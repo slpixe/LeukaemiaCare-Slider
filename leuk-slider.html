@@ -104,8 +104,7 @@ Example:
 
             .banner h2 {
                 font-family: 'Neucha', cursive;
-                font-size: 37px;
-                margin: 0 0 10px;
+                font-size: 18px;
             }
             .banner p {
                 margin: 0 0 10px;
@@ -131,10 +130,11 @@ Example:
                 padding-bottom: 56.25%;
                 background-size: cover;
                 position: relative;
+                padding-top: 50%;
             }
             .text {
                 position: absolute;
-                top: 0;
+                bottom: 0;
                 left: 0;
                 margin: 20px;
             }
@@ -187,9 +187,43 @@ Example:
                 margin-right: -80px !important;
                 background-image: url('images/slider-arrow-right.png');
             }
+
+            .owl-dots {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .owl-dot {
+                display: inline-block;
+                background-color: #f7f4f4;
+                border-radius:10px;
+                color: black;
+                padding: 10px 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .owl-dot.active {
+                background-color: #d30034;
+                color: white;
+            }
+
             @media(min-width: 768px){
                 .owl-stage-outer:before, .owl-stage-outer:after {
                     width: 100px;
+                }
+                .owl-dot {
+                    width: auto;
+                    margin: 0 8px 8px;
+                }
+                .banner h2 {
+                    font-size: 37px;
+                    margin: 0 0 10px;
+                }
+                .owl-item > * {
+                    padding-top: 0;
+                }
+                .text {
+                    bottom: auto;
+                    top: 0;
                 }
             }
             @media(min-width: 1060px){
@@ -236,6 +270,9 @@ Example:
                     center: true,
                     loop: true,
                     navText: ['',''],
+                    dots: true,
+                    dotData: true,
+                    dotsData: true,
                     responsive: {
                         0:{
                             items: 1,
