@@ -1,7 +1,6 @@
-# seed-element
+# Leuk-Slider
 
-An element providing a starting point for your own reusable Polymer elements.
-
+Slider for the LeukaemiaCare Homepage
 
 ## Dependencies
 
@@ -15,11 +14,7 @@ Then, go ahead and download the element's dependencies:
     bower install
 
 
-## Playing With Your Element
-
-If you wish to work on your element in isolation, we recommend that you use
-[Polyserve](https://github.com/PolymerLabs/polyserve) to keep your element's
-bower dependencies in line. You can install it via:
+## Testing the element
 
     npm install -g polyserve
 
@@ -30,13 +25,13 @@ And you can run it via:
     polyserve -H 192.168.1.51
 
 Once running, you can preview your element at
-`http://localhost:8080/components/seed-element/`, where `seed-element` is the name of the directory containing it.
+`http://localhost:8080/components/leuk-slider/`
 
 
 ## Testing Your Element
 
 Simply navigate to the `/test` directory of your element to run its tests. If
-you are using Polyserve: `http://localhost:8080/components/seed-element/test/`
+you are using Polyserve: `http://localhost:8080/components/leuk-slider/test/`
 
 ### web-component-tester
 
@@ -58,6 +53,10 @@ Then, you can run your tests on _all_ of your local browsers via:
 `wct test/some-file.html` will test only the files you specify.
 
 
-## Yeoman support
+## gh-pages
 
-If you'd like to use Yeoman to scaffold your element that's possible. The official [`generator-polymer`](https://github.com/yeoman/generator-polymer) generator has a [`seed`](https://github.com/yeoman/generator-polymer#seed) subgenerator.
+To publish to GH-Pages,
+
+	yo polymer:gh 
+
+[`generator-polymer`](https://github.com/yeoman/generator-polymer).
