@@ -16,11 +16,17 @@ An element for LeukaemiaCare to provider a carousel of information
 Example:
 
     <leuk-slider>
-        <div class="">
-            <img src="../images/slide1.jpg" alt="">
+        <div class="item-video" data-dot="Role of GPs Video">
+            <a class="owl-video" href="//www.youtube.com/embed/YE7VzlLtp-4?rel=0"></a>
         </div>
-        <div class="">
-            <img src="../images/slide2.jpg" alt="">
+        <div style="background-image: url('../images/slide1.jpg');" data-dot="Real life">
+            <div class="text">
+                <div class="banner">
+                    <h2>Real Life Story</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
         </div>
     </leuk-slider>
 
@@ -48,7 +54,7 @@ Example:
                 padding-bottom: 56.25%;
             }
 
-            .embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
+            .owl-carousel .owl-video-wrapper, .embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -203,6 +209,10 @@ Example:
                 color: white;
             }
 
+            .owl-carousel .owl-video-tn {
+                background-size: cover;
+            }
+
             @media(min-width: 768px){
                 .owl-stage-outer:before, .owl-stage-outer:after {
                     width: 100px;
@@ -264,6 +274,7 @@ Example:
                     dots: true,
                     dotData: true,
                     dotsData: true,
+                    video: true,
                     responsive: {
                         0:{
                             items: 1,
