@@ -21,7 +21,7 @@
     "polymer": "Polymer/polymer#^1.2.0",
     "jquery2-import": "https://github.com/Polymer/jquery2-import.git#~0.5.6",
     "markitup": "~1.1.14",
-    "owl.carousel": "OwlCarousel2#~2.0.0-beta.3"
+    "owl.carousel": "OwlCarousel2#master"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
