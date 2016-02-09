@@ -58,5 +58,7 @@ Then, you can run your tests on _all_ of your local browsers via:
 To publish to GH-Pages,
 
 	yo polymer:gh 
+still need to delete on every publish
+	/components/owl.carousel/docs_src/templates/pages/docs/dev-external.hbs
 
 [`generator-polymer`](https://github.com/yeoman/generator-polymer).
