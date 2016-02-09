@@ -1,0 +1,297 @@
+<link rel="import" href="../jquery2-import/jquery2-import.html">
+<link rel="stylesheet" href="../owl.carousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="../owl.carousel/dist/assets/owl.theme.default.min.css">
+<script type="application/javascript" src="../owl.carousel/dist/owl.carousel.min.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+
+<!--<script type="text/javascript" src="../markitup/markitup/jquery.markitup.js"></script>-->
+
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+An element for LeukaemiaCare to provider a carousel of information
+
+Example:
+
+    <leuk-slider>
+        <div class="item-video" data-dot="Role of GPs Video">
+            <a class="owl-video" href="//www.youtube.com/embed/YE7VzlLtp-4?rel=0"></a>
+        </div>
+        <div style="background-image: url('../images/slide1.jpg');" data-dot="Real life">
+            <div class="text">
+                <div class="banner">
+                    <h2>Real Life Story</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </leuk-slider>
+
+@demo demo/index.html
+-->
+
+<dom-module id="leuk-slider">
+    <template>
+
+        <style>
+            :host {
+                display: block;
+                clear: both;
+            }
+
+            .embed-responsive {
+                position: relative;
+                display: block;
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            .embed-responsive-16by9 {
+                padding-bottom: 56.25%;
+            }
+
+            .owl-carousel .owl-video-wrapper, .embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            .banner {
+                position: relative;
+                width: 50%;
+                width: 100%;
+                background-image: url('images/homepage-banner_02.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                margin-top: 32px;
+                /*margin-bottom: 32px;*/
+                margin-bottom: 52px;
+                color: white;
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                font-size: 12px;
+            }
+            .banner > * {
+                padding: 0 16px;
+            }
+
+            .banner:before,
+            .banner:after {
+                content: '';
+                width: 100%;
+                height: 32px;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .banner:before {
+                background-image: url('images/homepage-banner_01.png');
+                top: -32px;
+            }
+
+            .banner:after {
+                background-image: url('images/homepage-banner_03.png');
+                bottom: -32px;
+            }
+
+            .banner h2 {
+                font-family: 'Neucha', cursive;
+                font-size: 18px;
+            }
+            .banner p {
+                margin: 0 0 10px;
+            }
+
+            .owl-stage-outer:before, .owl-stage-outer:after {
+                content: '';
+                width: 0%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background-color: rgba(255,0,0,0.5);
+                z-index: 1;
+            }
+            .owl-stage-outer:before {
+                left: 0;
+            }
+            .owl-stage-outer:after {
+                right: 0;
+            }
+
+            .owl-item > * {
+                padding-bottom: 56.25%;
+                background-size: cover;
+                position: relative;
+                padding-top: 50%;
+            }
+            .text {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin: 20px;
+            }
+
+            .btn {
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                padding: 8px 20px 6px 20px;
+                border-radius: 5px;
+                text-transform: uppercase;
+                background: #42bba4;
+                font-family: 'Neucha', cursive;
+                text-decoration: none;
+                position: relative;
+            }
+            .btn:after {
+                content: '';
+                background-image: url('images/arrow-right.png');
+                background-repeat: no-repeat;
+                width: 22px;
+                height: 17px;
+                display: inline-block;
+                margin-left: 8px;
+                top: 2px;
+                position: relative;
+            }
+
+            .owl-nav {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                margin-top: 0 !important;
+                top: 50%;
+            }
+            .owl-prev, .owl-next {
+                position: absolute;
+                background-repeat: no-repeat;
+                width: 70px;
+                height: 70px;
+                margin-top: -35px;
+            }
+            .owl-prev {
+                left: 12%;
+                margin-left: -80px !important;
+                background-image: url('images/slider-arrow-left.png');
+            }
+            .owl-next {
+                right: 12%;
+                margin-right: -80px !important;
+                background-image: url('images/slider-arrow-right.png');
+            }
+
+            .owl-dots {
+                margin: 10px 0;
+                text-align: center;
+                font-family: 'Karla', sans-serif;
+                font-weight: 400;
+            }
+            .owl-dot {
+                display: inline-block;
+                background-color: #f7f4f4;
+                border-radius:10px;
+                color: black;
+                padding: 10px 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .owl-dot.active {
+                background-color: #d30034;
+                color: white;
+            }
+
+            .owl-carousel .owl-video-tn {
+                background-size: cover;
+            }
+
+            @media(min-width: 768px){
+                .owl-stage-outer:before, .owl-stage-outer:after {
+                    width: 100px;
+                }
+                .owl-dot {
+                    width: auto;
+                    margin: 0 8px 8px;
+                }
+                .banner h2 {
+                    font-size: 37px;
+                    margin: 0 0 10px;
+                }
+                .owl-item > * {
+                    padding-top: 0;
+                }
+                .text {
+                    bottom: auto;
+                    top: 0;
+                }
+            }
+            @media(min-width: 1060px){
+                .owl-prev {
+                    left: 25%;
+                }
+                .owl-next {
+                    right: 25%;
+                }
+                .owl-stage-outer:before, .owl-stage-outer:after {
+                    width: 25%;
+                }
+            }
+
+        </style>
+
+        <div id="leukslider" class="owl-carousel leuk-theme">
+            <content></content>
+        </div>
+
+    </template>
+
+    <script>
+        polyLeukSlider = Polymer({
+            is: 'leuk-slider',
+            value: "",
+            cols: 80,
+            ready: function() {
+//                $(this.$.rich).markItUp(mySettings);
+
+                this.scopeSubtree(this.$.leukslider, true);
+                //Setting it to true enables a mutation observer that applies CSS scoping whenever leukslider or any of its descendants are modified.
+
+                $('.owl-carousel').owlCarousel({
+                    items: 3,
+                    margin: 0,
+                    nav: true,
+                    center: true,
+                    loop: true,
+                    navText: ['',''],
+                    dots: true,
+                    dotData: true,
+                    dotsData: true,
+                    video: true,
+                    responsive: {
+                        0:{
+                            items: 1,
+                            nav: false
+                        },
+                        768:{
+                            items: 1,
+                            stagePadding: 100,
+                            nav: true
+                        },
+                        1060:{
+                            items: 2,
+                            stagePadding: 0
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</dom-module>

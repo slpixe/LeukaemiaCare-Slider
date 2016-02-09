@@ -1,0 +1,39 @@
+{
+  "name": "leuk-slider",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "leuk-slider.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/slpixe/leuk-slider/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0",
+    "jquery2-import": "https://github.com/Polymer/jquery2-import.git#~0.5.6",
+    "markitup": "~1.1.14",
+    "owl.carousel": "OwlCarousel2#master"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0"
+  },
+  "_release": "a2b8ae2003",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a2b8ae2003256c785feab9275ca8791548744611"
+  },
+  "_source": "git://github.com/slpixe/leuk-slider.git",
+  "_target": "master",
+  "_originalSource": "slpixe/leuk-slider",
+  "_direct": true
+}

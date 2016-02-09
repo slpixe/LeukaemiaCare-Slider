@@ -1,0 +1,26 @@
+{
+  "name": "leuk-slider",
+  "version": "1.0.0",
+  "description": "An element providing a starting point for your own reusable Polymer elements.",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "polyserve": "^0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slpixe/leuk-slider.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slpixe/leuk-slider/issues"
+  },
+  "homepage": "https://github.com/slpixe/leuk-slider#readme"
+}
