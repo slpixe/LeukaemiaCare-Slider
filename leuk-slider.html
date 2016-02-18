@@ -87,6 +87,7 @@ Example:
                 position: absolute;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
+                left: 0;
             }
 
             .banner:before {
@@ -265,6 +266,21 @@ Example:
                     bottom: auto;
                     top: 0;
                     max-width: 50%;
+                }
+                .bannerPos--left {
+                    left: 0;
+                    right: auto;
+                }
+                .bannerPos--right {
+                    right: 0;
+                    left: auto;
+                    text-align: right;
+                }
+                .bannerPos--mid {
+                    left: 50%;
+                    right: auto;
+                    margin-left: -25%;
+                    text-align: center;
                 }
             }
             @media(min-width: 1060px){
